@@ -23,12 +23,18 @@ class ViewController: UIViewController {
         if count >= 20 {
             label.textColor = UIColor.red;
         }
+        else{
+             label.textColor = UIColor.white;
+        }
         label.text = "\(count)";
     }
     
     @IBAction func minusAction(_ sender: Any) {
-        if(count >= 1){
+        if count >= 1 {
             count -= 1;
+        }
+        if count <= 20 {
+             label.textColor = UIColor.white;
         }
         label.text = "\(count)";
     }
